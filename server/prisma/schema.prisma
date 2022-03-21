@@ -1,0 +1,68 @@
+datasource postgres {
+  provider = "postgresql"
+  url      = env("POSTGRESQL_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  createdAt DateTime @default(now())
+  firstName String?
+  id        String   @id @default(cuid())
+  lastName  String?
+  password  String
+  roles     String[]
+  updatedAt DateTime @updatedAt
+  username  String   @unique
+}
+
+model City {
+  attractions     Attraction[]
+  code            String?
+  country         String?
+  createdAt       DateTime         @default(now())
+  foodPlaces      FoodPlace[]
+  id              String           @id @default(cuid())
+  name            String?
+  startStopPlaces StartStopPlace[]
+  updatedAt       DateTime         @updatedAt
+}
+
+model Attraction {
+  city             City?     @relation(fields: [cityId], references: [id])
+  cityId           String?
+  closes           String?
+  createdAt        DateTime  @default(now())
+  id               String    @id @default(cuid())
+  opens            DateTime?
+  typicalTimeSpent Float?
+  updatedAt        DateTime  @updatedAt
+}
+
+model StartStopPlace {
+  city          City?    @relation(fields: [cityId], references: [id])
+  cityId        String?
+  closesAt      String?
+  createdAt     DateTime @default(now())
+  geolocation   String?
+  id            String   @id @default(cuid())
+  lastAvailable String?
+  name          String?
+  opensAt       String?
+  typeOfPlace   String?
+  updatedAt     DateTime @updatedAt
+}
+
+model FoodPlace {
+  city             City?    @relation(fields: [cityId], references: [id])
+  cityId           String?
+  createdAt        DateTime @default(now())
+  geolocation      String?
+  id               String   @id @default(cuid())
+  name             String?
+  typeoffood       String?
+  typicalTimespent String?
+  updatedAt        DateTime @updatedAt
+}
