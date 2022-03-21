@@ -1,0 +1,19 @@
+{
+  "dataServiceGeneratorVersion": "0.12.1",
+  "appInfo": {
+    "name": "Trip Planner",
+    "description": "plans a trip",
+    "version": "oid7vvp0",
+    "id": "cl10vz56y48083501s63rl7efp1",
+    "url": "https://app.amplication.com/cl10vz56y48083501s63rl7efp1",
+    "settings": {
+      "dbHost": "localhost",
+      "dbName": "tpdb",
+      "dbPassword": "admin",
+      "dbPort": 5432,
+      "dbUser": "admin",
+      "appId": "cl10vz56y48083501s63rl7efp1",
+      "authProvider": "Jwt"
+    }
+  }
+}
