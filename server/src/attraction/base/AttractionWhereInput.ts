@@ -11,26 +11,23 @@ https://docs.amplication.com/docs/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { CityWhereUniqueInput } from "../../city/base/CityWhereUniqueInput";
-import { ValidateNested, IsOptional } from "class-validator";
-import { Type } from "class-transformer";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { Type } from "class-transformer";
+import { IsOptional } from "class-validator";
 import { StringFilter } from "../../util/StringFilter";
-import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 import { FloatNullableFilter } from "../../util/FloatNullableFilter";
 @InputType()
 class AttractionWhereInput {
   @ApiProperty({
     required: false,
-    type: () => CityWhereUniqueInput,
+    type: StringNullableFilter,
   })
-  @ValidateNested()
-  @Type(() => CityWhereUniqueInput)
+  @Type(() => StringNullableFilter)
   @IsOptional()
-  @Field(() => CityWhereUniqueInput, {
+  @Field(() => StringNullableFilter, {
     nullable: true,
   })
-  city?: CityWhereUniqueInput;
+  city?: StringNullableFilter;
 
   @ApiProperty({
     required: false,
@@ -56,14 +53,25 @@ class AttractionWhereInput {
 
   @ApiProperty({
     required: false,
-    type: DateTimeNullableFilter,
+    type: StringNullableFilter,
   })
-  @Type(() => DateTimeNullableFilter)
+  @Type(() => StringNullableFilter)
   @IsOptional()
-  @Field(() => DateTimeNullableFilter, {
+  @Field(() => StringNullableFilter, {
     nullable: true,
   })
-  opens?: DateTimeNullableFilter;
+  name?: StringNullableFilter;
+
+  @ApiProperty({
+    required: false,
+    type: StringNullableFilter,
+  })
+  @Type(() => StringNullableFilter)
+  @IsOptional()
+  @Field(() => StringNullableFilter, {
+    nullable: true,
+  })
+  opens?: StringNullableFilter;
 
   @ApiProperty({
     required: false,

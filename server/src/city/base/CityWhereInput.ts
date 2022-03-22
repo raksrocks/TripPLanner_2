@@ -11,27 +11,14 @@ https://docs.amplication.com/docs/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { AttractionListRelationFilter } from "../../attraction/base/AttractionListRelationFilter";
-import { ValidateNested, IsOptional } from "class-validator";
-import { Type } from "class-transformer";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { Type } from "class-transformer";
+import { IsOptional, ValidateNested } from "class-validator";
 import { FoodPlaceListRelationFilter } from "../../foodPlace/base/FoodPlaceListRelationFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { StartStopPlaceListRelationFilter } from "../../startStopPlace/base/StartStopPlaceListRelationFilter";
 @InputType()
 class CityWhereInput {
-  @ApiProperty({
-    required: false,
-    type: () => AttractionListRelationFilter,
-  })
-  @ValidateNested()
-  @Type(() => AttractionListRelationFilter)
-  @IsOptional()
-  @Field(() => AttractionListRelationFilter, {
-    nullable: true,
-  })
-  attractions?: AttractionListRelationFilter;
-
   @ApiProperty({
     required: false,
     type: StringNullableFilter,

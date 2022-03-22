@@ -24,23 +24,6 @@ export const CityShow = (props: ShowProps): React.ReactElement => {
         <TextField label="Name" source="name" />
         <DateField source="updatedAt" label="Updated At" />
         <ReferenceManyField
-          reference="Attraction"
-          target="CityId"
-          label="Attractions"
-        >
-          <Datagrid rowClick="show">
-            <ReferenceField label="City" source="city.id" reference="City">
-              <TextField source={CITY_TITLE_FIELD} />
-            </ReferenceField>
-            <TextField label="Closes" source="closes" />
-            <DateField source="createdAt" label="Created At" />
-            <TextField label="ID" source="id" />
-            <TextField label="Opens" source="opens" />
-            <TextField label="TypicalTimeSpent" source="typicalTimeSpent" />
-            <DateField source="updatedAt" label="Updated At" />
-          </Datagrid>
-        </ReferenceManyField>
-        <ReferenceManyField
           reference="FoodPlace"
           target="CityId"
           label="FoodPlaces"

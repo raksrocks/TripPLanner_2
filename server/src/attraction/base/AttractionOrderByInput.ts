@@ -25,7 +25,7 @@ class AttractionOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  cityId?: SortOrder;
+  city?: SortOrder;
 
   @ApiProperty({
     required: false,
@@ -53,6 +53,24 @@ class AttractionOrderByInput {
     nullable: true,
   })
   id?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
+  location?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
+  name?: SortOrder;
 
   @ApiProperty({
     required: false,

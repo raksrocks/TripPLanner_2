@@ -11,25 +11,12 @@ https://docs.amplication.com/docs/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { AttractionUpdateManyWithoutCitiesInput } from "./AttractionUpdateManyWithoutCitiesInput";
-import { ValidateNested, IsOptional, IsString } from "class-validator";
-import { Type } from "class-transformer";
+import { IsString, IsOptional, ValidateNested } from "class-validator";
 import { FoodPlaceUpdateManyWithoutCitiesInput } from "./FoodPlaceUpdateManyWithoutCitiesInput";
+import { Type } from "class-transformer";
 import { StartStopPlaceUpdateManyWithoutCitiesInput } from "./StartStopPlaceUpdateManyWithoutCitiesInput";
 @InputType()
 class CityUpdateInput {
-  @ApiProperty({
-    required: false,
-    type: () => AttractionUpdateManyWithoutCitiesInput,
-  })
-  @ValidateNested()
-  @Type(() => AttractionUpdateManyWithoutCitiesInput)
-  @IsOptional()
-  @Field(() => AttractionUpdateManyWithoutCitiesInput, {
-    nullable: true,
-  })
-  attractions?: AttractionUpdateManyWithoutCitiesInput;
-
   @ApiProperty({
     required: false,
     type: String,

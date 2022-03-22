@@ -11,22 +11,12 @@ https://docs.amplication.com/docs/how-to/custom-code
   */
 import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { Attraction } from "../../attraction/base/Attraction";
-import { ValidateNested, IsOptional, IsString, IsDate } from "class-validator";
+import { IsString, IsOptional, IsDate, ValidateNested } from "class-validator";
 import { Type } from "class-transformer";
 import { FoodPlace } from "../../foodPlace/base/FoodPlace";
 import { StartStopPlace } from "../../startStopPlace/base/StartStopPlace";
 @ObjectType()
 class City {
-  @ApiProperty({
-    required: false,
-    type: () => [Attraction],
-  })
-  @ValidateNested()
-  @Type(() => Attraction)
-  @IsOptional()
-  attractions?: Array<Attraction>;
-
   @ApiProperty({
     required: false,
     type: String,
