@@ -25,7 +25,6 @@ import { DeleteAttractionArgs } from "./DeleteAttractionArgs";
 import { AttractionFindManyArgs } from "./AttractionFindManyArgs";
 import { AttractionFindUniqueArgs } from "./AttractionFindUniqueArgs";
 import { Attraction } from "./Attraction";
-import { City } from "../../city/base/City";
 import { AttractionService } from "../attraction.service";
 
 @graphql.Resolver(() => Attraction)
@@ -132,15 +131,7 @@ export class AttractionResolverBase {
     // @ts-ignore
     return await this.service.create({
       ...args,
-      data: {
-        ...args.data,
-
-        city: args.data.city
-          ? {
-              connect: args.data.city,
-            }
-          : undefined,
-      },
+      data: args.data,
     });
   }
 
@@ -179,15 +170,7 @@ export class AttractionResolverBase {
       // @ts-ignore
       return await this.service.update({
         ...args,
-        data: {
-          ...args.data,
-
-          city: args.data.city
-            ? {
-                connect: args.data.city,
-              }
-            : undefined,
-        },
+        data: args.data,
       });
     } catch (error) {
       if (isRecordNotFoundError(error)) {
@@ -219,29 +202,5 @@ export class AttractionResolverBase {
       }
       throw error;
     }
-  }
-
-  @graphql.ResolveField(() => City, { nullable: true })
-  @nestAccessControl.UseRoles({
-    resource: "Attraction",
-    action: "read",
-    possession: "any",
-  })
-  async city(
-    @graphql.Parent() parent: Attraction,
-    @gqlUserRoles.UserRoles() userRoles: string[]
-  ): Promise<City | null> {
-    const permission = this.rolesBuilder.permission({
-      role: userRoles,
-      action: "read",
-      possession: "any",
-      resource: "City",
-    });
-    const result = await this.service.getCity(parent.id);
-
-    if (!result) {
-      return null;
-    }
-    return permission.filter(result);
   }
 }

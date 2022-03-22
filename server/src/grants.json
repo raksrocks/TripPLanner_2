@@ -6,7 +6,19 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
     "role": "user",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
     "resource": "User",
     "action": "create:any",
     "attributes": "*"
@@ -18,7 +30,19 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
     "role": "user",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
     "resource": "User",
     "action": "delete:any",
     "attributes": "*"
@@ -30,7 +54,19 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
     "role": "user",
+    "resource": "City",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
     "resource": "City",
     "action": "read:own",
     "attributes": "*"
@@ -42,13 +78,31 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "City",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
     "role": "user",
     "resource": "City",
     "action": "update:any",
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "City",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
     "role": "user",
+    "resource": "City",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
     "resource": "City",
     "action": "delete:any",
     "attributes": "*"
@@ -60,7 +114,19 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "City",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
     "role": "user",
+    "resource": "Attraction",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
     "resource": "Attraction",
     "action": "read:own",
     "attributes": "*"
@@ -72,13 +138,31 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "Attraction",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
     "role": "user",
     "resource": "Attraction",
     "action": "update:any",
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "Attraction",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
     "role": "user",
+    "resource": "Attraction",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
     "resource": "Attraction",
     "action": "delete:any",
     "attributes": "*"
@@ -90,7 +174,19 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "Attraction",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
     "role": "user",
+    "resource": "StartStopPlace",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
     "resource": "StartStopPlace",
     "action": "read:own",
     "attributes": "*"
@@ -102,13 +198,31 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "StartStopPlace",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
     "role": "user",
     "resource": "StartStopPlace",
     "action": "update:any",
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "StartStopPlace",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
     "role": "user",
+    "resource": "StartStopPlace",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
     "resource": "StartStopPlace",
     "action": "delete:any",
     "attributes": "*"
@@ -120,7 +234,19 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "StartStopPlace",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
     "role": "user",
+    "resource": "FoodPlace",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
     "resource": "FoodPlace",
     "action": "read:own",
     "attributes": "*"
@@ -132,7 +258,19 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "FoodPlace",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
     "role": "user",
+    "resource": "FoodPlace",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
     "resource": "FoodPlace",
     "action": "update:any",
     "attributes": "*"
@@ -144,7 +282,19 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "FoodPlace",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
     "role": "user",
+    "resource": "FoodPlace",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
     "resource": "FoodPlace",
     "action": "read:any",
     "attributes": "*"

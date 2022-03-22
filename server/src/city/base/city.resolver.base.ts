@@ -25,8 +25,6 @@ import { DeleteCityArgs } from "./DeleteCityArgs";
 import { CityFindManyArgs } from "./CityFindManyArgs";
 import { CityFindUniqueArgs } from "./CityFindUniqueArgs";
 import { City } from "./City";
-import { AttractionFindManyArgs } from "../../attraction/base/AttractionFindManyArgs";
-import { Attraction } from "../../attraction/base/Attraction";
 import { FoodPlaceFindManyArgs } from "../../foodPlace/base/FoodPlaceFindManyArgs";
 import { FoodPlace } from "../../foodPlace/base/FoodPlace";
 import { StartStopPlaceFindManyArgs } from "../../startStopPlace/base/StartStopPlaceFindManyArgs";
@@ -206,32 +204,6 @@ export class CityResolverBase {
       }
       throw error;
     }
-  }
-
-  @graphql.ResolveField(() => [Attraction])
-  @nestAccessControl.UseRoles({
-    resource: "City",
-    action: "read",
-    possession: "any",
-  })
-  async attractions(
-    @graphql.Parent() parent: City,
-    @graphql.Args() args: AttractionFindManyArgs,
-    @gqlUserRoles.UserRoles() userRoles: string[]
-  ): Promise<Attraction[]> {
-    const permission = this.rolesBuilder.permission({
-      role: userRoles,
-      action: "read",
-      possession: "any",
-      resource: "Attraction",
-    });
-    const results = await this.service.findAttractions(parent.id, args);
-
-    if (!results) {
-      return [];
-    }
-
-    return results.map((result) => permission.filter(result));
   }
 
   @graphql.ResolveField(() => [FoodPlace])

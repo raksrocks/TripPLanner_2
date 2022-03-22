@@ -19,7 +19,6 @@ model User {
 }
 
 model City {
-  attractions     Attraction[]
   code            String?
   country         String?
   createdAt       DateTime         @default(now())
@@ -31,14 +30,15 @@ model City {
 }
 
 model Attraction {
-  city             City?     @relation(fields: [cityId], references: [id])
-  cityId           String?
+  city             String?
   closes           String?
-  createdAt        DateTime  @default(now())
-  id               String    @id @default(cuid())
-  opens            DateTime?
+  createdAt        DateTime @default(now())
+  id               String   @id @default(cuid())
+  location         String?
+  name             String?
+  opens            String?
   typicalTimeSpent Float?
-  updatedAt        DateTime  @updatedAt
+  updatedAt        DateTime @updatedAt
 }
 
 model StartStopPlace {

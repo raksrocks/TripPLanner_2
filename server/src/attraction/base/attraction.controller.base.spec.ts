@@ -11,36 +11,48 @@ import { AttractionService } from "../attraction.service";
 const nonExistingId = "nonExistingId";
 const existingId = "existingId";
 const CREATE_INPUT = {
+  city: "exampleCity",
   closes: "exampleCloses",
   createdAt: new Date(),
   id: "exampleId",
-  opens: new Date(),
+  location: "exampleLocation",
+  name: "exampleName",
+  opens: "exampleOpens",
   typicalTimeSpent: 42.42,
   updatedAt: new Date(),
 };
 const CREATE_RESULT = {
+  city: "exampleCity",
   closes: "exampleCloses",
   createdAt: new Date(),
   id: "exampleId",
-  opens: new Date(),
+  location: "exampleLocation",
+  name: "exampleName",
+  opens: "exampleOpens",
   typicalTimeSpent: 42.42,
   updatedAt: new Date(),
 };
 const FIND_MANY_RESULT = [
   {
+    city: "exampleCity",
     closes: "exampleCloses",
     createdAt: new Date(),
     id: "exampleId",
-    opens: new Date(),
+    location: "exampleLocation",
+    name: "exampleName",
+    opens: "exampleOpens",
     typicalTimeSpent: 42.42,
     updatedAt: new Date(),
   },
 ];
 const FIND_ONE_RESULT = {
+  city: "exampleCity",
   closes: "exampleCloses",
   createdAt: new Date(),
   id: "exampleId",
-  opens: new Date(),
+  location: "exampleLocation",
+  name: "exampleName",
+  opens: "exampleOpens",
   typicalTimeSpent: 42.42,
   updatedAt: new Date(),
 };
@@ -109,7 +121,6 @@ describe("Attraction", () => {
       .expect({
         ...CREATE_RESULT,
         createdAt: CREATE_RESULT.createdAt.toISOString(),
-        opens: CREATE_RESULT.opens.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
       });
   });
@@ -122,7 +133,6 @@ describe("Attraction", () => {
         {
           ...FIND_MANY_RESULT[0],
           createdAt: FIND_MANY_RESULT[0].createdAt.toISOString(),
-          opens: FIND_MANY_RESULT[0].opens.toISOString(),
           updatedAt: FIND_MANY_RESULT[0].updatedAt.toISOString(),
         },
       ]);
@@ -146,7 +156,6 @@ describe("Attraction", () => {
       .expect({
         ...FIND_ONE_RESULT,
         createdAt: FIND_ONE_RESULT.createdAt.toISOString(),
-        opens: FIND_ONE_RESULT.opens.toISOString(),
         updatedAt: FIND_ONE_RESULT.updatedAt.toISOString(),
       });
   });

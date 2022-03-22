@@ -1,8 +1,8 @@
-import { CityWhereUniqueInput } from "../city/CityWhereUniqueInput";
-
 export type AttractionUpdateInput = {
-  city?: CityWhereUniqueInput | null;
+  city?: string | null;
   closes?: string | null;
-  opens?: Date | null;
+  location?: string | null;
+  name?: string | null;
+  opens?: string | null;
   typicalTimeSpent?: number | null;
 };

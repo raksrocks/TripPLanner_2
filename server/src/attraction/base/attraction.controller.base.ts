@@ -70,25 +70,14 @@ export class AttractionControllerBase {
       );
     }
     return await this.service.create({
-      data: {
-        ...data,
-
-        city: data.city
-          ? {
-              connect: data.city,
-            }
-          : undefined,
-      },
+      data: data,
       select: {
-        city: {
-          select: {
-            id: true,
-          },
-        },
-
+        city: true,
         closes: true,
         createdAt: true,
         id: true,
+        location: true,
+        name: true,
         opens: true,
         typicalTimeSpent: true,
         updatedAt: true,
@@ -125,15 +114,12 @@ export class AttractionControllerBase {
     const results = await this.service.findMany({
       ...args,
       select: {
-        city: {
-          select: {
-            id: true,
-          },
-        },
-
+        city: true,
         closes: true,
         createdAt: true,
         id: true,
+        location: true,
+        name: true,
         opens: true,
         typicalTimeSpent: true,
         updatedAt: true,
@@ -169,15 +155,12 @@ export class AttractionControllerBase {
     const result = await this.service.findOne({
       where: params,
       select: {
-        city: {
-          select: {
-            id: true,
-          },
-        },
-
+        city: true,
         closes: true,
         createdAt: true,
         id: true,
+        location: true,
+        name: true,
         opens: true,
         typicalTimeSpent: true,
         updatedAt: true,
@@ -232,25 +215,14 @@ export class AttractionControllerBase {
     try {
       return await this.service.update({
         where: params,
-        data: {
-          ...data,
-
-          city: data.city
-            ? {
-                connect: data.city,
-              }
-            : undefined,
-        },
+        data: data,
         select: {
-          city: {
-            select: {
-              id: true,
-            },
-          },
-
+          city: true,
           closes: true,
           createdAt: true,
           id: true,
+          location: true,
+          name: true,
           opens: true,
           typicalTimeSpent: true,
           updatedAt: true,
@@ -287,15 +259,12 @@ export class AttractionControllerBase {
       return await this.service.delete({
         where: params,
         select: {
-          city: {
-            select: {
-              id: true,
-            },
-          },
-
+          city: true,
           closes: true,
           createdAt: true,
           id: true,
+          location: true,
+          name: true,
           opens: true,
           typicalTimeSpent: true,
           updatedAt: true,

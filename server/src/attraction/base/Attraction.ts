@@ -11,25 +11,20 @@ https://docs.amplication.com/docs/how-to/custom-code
   */
 import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { City } from "../../city/base/City";
-import {
-  ValidateNested,
-  IsOptional,
-  IsString,
-  IsDate,
-  IsNumber,
-} from "class-validator";
+import { IsString, IsOptional, IsDate, IsNumber } from "class-validator";
 import { Type } from "class-transformer";
 @ObjectType()
 class Attraction {
   @ApiProperty({
     required: false,
-    type: () => City,
+    type: String,
   })
-  @ValidateNested()
-  @Type(() => City)
+  @IsString()
   @IsOptional()
-  city?: City | null;
+  @Field(() => String, {
+    nullable: true,
+  })
+  city!: string | null;
 
   @ApiProperty({
     required: false,
@@ -60,14 +55,36 @@ class Attraction {
 
   @ApiProperty({
     required: false,
+    type: String,
   })
-  @IsDate()
-  @Type(() => Date)
+  @IsString()
   @IsOptional()
-  @Field(() => Date, {
+  @Field(() => String, {
     nullable: true,
   })
-  opens!: Date | null;
+  location!: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  name!: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  opens!: string | null;
 
   @ApiProperty({
     required: false,
