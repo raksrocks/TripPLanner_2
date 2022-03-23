@@ -62,6 +62,7 @@ model FoodPlace {
   geolocation      String?
   id               String   @id @default(cuid())
   name             String?
+  rating           Int?
   typeoffood       String?
   typicalTimespent String?
   updatedAt        DateTime @updatedAt
