@@ -70,6 +70,15 @@ class FoodPlaceOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
+  rating?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
   typeoffood?: SortOrder;
 
   @ApiProperty({

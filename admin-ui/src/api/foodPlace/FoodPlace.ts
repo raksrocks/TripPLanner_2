@@ -6,6 +6,7 @@ export type FoodPlace = {
   geolocation: string | null;
   id: string;
   name: string | null;
+  rating: number | null;
   typeoffood: string | null;
   typicalTimespent: string | null;
   updatedAt: Date;

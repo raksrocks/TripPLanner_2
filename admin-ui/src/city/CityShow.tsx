@@ -36,6 +36,7 @@ export const CityShow = (props: ShowProps): React.ReactElement => {
             <TextField label="geolocation" source="geolocation" />
             <TextField label="ID" source="id" />
             <TextField label="Name" source="name" />
+            <TextField label="rating" source="rating" />
             <TextField label="typeoffood" source="typeoffood" />
             <TextField label="typicalTimespent" source="typicalTimespent" />
             <DateField source="updatedAt" label="Updated At" />

@@ -6,6 +6,7 @@ export type FoodPlaceOrderByInput = {
   geolocation?: SortOrder;
   id?: SortOrder;
   name?: SortOrder;
+  rating?: SortOrder;
   typeoffood?: SortOrder;
   typicalTimespent?: SortOrder;
   updatedAt?: SortOrder;

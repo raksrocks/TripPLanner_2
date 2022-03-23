@@ -308,6 +308,7 @@ export class CityControllerBase {
         geolocation: true,
         id: true,
         name: true,
+        rating: true,
         typeoffood: true,
         typicalTimespent: true,
         updatedAt: true,
