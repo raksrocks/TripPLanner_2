@@ -304,10 +304,12 @@ export class CityControllerBase {
           },
         },
 
+        closes: true,
         createdAt: true,
         geolocation: true,
         id: true,
         name: true,
+        opens: true,
         rating: true,
         typeoffood: true,
         typicalTimespent: true,

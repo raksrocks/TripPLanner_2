@@ -40,6 +40,17 @@ class FoodPlaceWhereInput {
   @Field(() => StringNullableFilter, {
     nullable: true,
   })
+  closes?: StringNullableFilter;
+
+  @ApiProperty({
+    required: false,
+    type: StringNullableFilter,
+  })
+  @Type(() => StringNullableFilter)
+  @IsOptional()
+  @Field(() => StringNullableFilter, {
+    nullable: true,
+  })
   geolocation?: StringNullableFilter;
 
   @ApiProperty({
@@ -63,6 +74,17 @@ class FoodPlaceWhereInput {
     nullable: true,
   })
   name?: StringNullableFilter;
+
+  @ApiProperty({
+    required: false,
+    type: StringNullableFilter,
+  })
+  @Type(() => StringNullableFilter)
+  @IsOptional()
+  @Field(() => StringNullableFilter, {
+    nullable: true,
+  })
+  opens?: StringNullableFilter;
 
   @ApiProperty({
     required: false,

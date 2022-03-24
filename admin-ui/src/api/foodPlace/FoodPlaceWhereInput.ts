@@ -5,9 +5,11 @@ import { IntNullableFilter } from "../../util/IntNullableFilter";
 
 export type FoodPlaceWhereInput = {
   city?: CityWhereUniqueInput;
+  closes?: StringNullableFilter;
   geolocation?: StringNullableFilter;
   id?: StringFilter;
   name?: StringNullableFilter;
+  opens?: StringNullableFilter;
   rating?: IntNullableFilter;
   typeoffood?: StringNullableFilter;
   typicalTimespent?: StringNullableFilter;

@@ -37,6 +37,17 @@ class FoodPlaceCreateInput {
   @Field(() => String, {
     nullable: true,
   })
+  closes?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
   geolocation?: string | null;
 
   @ApiProperty({
@@ -49,6 +60,17 @@ class FoodPlaceCreateInput {
     nullable: true,
   })
   name?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  opens?: string | null;
 
   @ApiProperty({
     required: false,

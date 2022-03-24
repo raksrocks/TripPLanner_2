@@ -16,10 +16,12 @@ export const FoodPlaceShow = (props: ShowProps): React.ReactElement => {
         <ReferenceField label="City" source="city.id" reference="City">
           <TextField source={CITY_TITLE_FIELD} />
         </ReferenceField>
+        <TextField label="closes" source="closes" />
         <DateField source="createdAt" label="Created At" />
         <TextField label="geolocation" source="geolocation" />
         <TextField label="ID" source="id" />
         <TextField label="Name" source="name" />
+        <TextField label="opens" source="opens" />
         <TextField label="rating" source="rating" />
         <TextField label="typeoffood" source="typeoffood" />
         <TextField label="typicalTimespent" source="typicalTimespent" />

@@ -34,6 +34,15 @@ class FoodPlaceOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
+  closes?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
   createdAt?: SortOrder;
 
   @ApiProperty({
@@ -62,6 +71,15 @@ class FoodPlaceOrderByInput {
     nullable: true,
   })
   name?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
+  opens?: SortOrder;
 
   @ApiProperty({
     required: false,
