@@ -58,10 +58,12 @@ model StartStopPlace {
 model FoodPlace {
   city             City?    @relation(fields: [cityId], references: [id])
   cityId           String?
+  closes           String?
   createdAt        DateTime @default(now())
   geolocation      String?
   id               String   @id @default(cuid())
   name             String?
+  opens            String?
   rating           Int?
   typeoffood       String?
   typicalTimespent String?

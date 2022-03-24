@@ -15,8 +15,8 @@ import { City } from "../../city/base/City";
 import {
   ValidateNested,
   IsOptional,
-  IsDate,
   IsString,
+  IsDate,
   IsInt,
 } from "class-validator";
 import { Type } from "class-transformer";
@@ -30,6 +30,17 @@ class FoodPlace {
   @Type(() => City)
   @IsOptional()
   city?: City | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  closes!: string | null;
 
   @ApiProperty({
     required: true,
@@ -68,6 +79,17 @@ class FoodPlace {
     nullable: true,
   })
   name!: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  opens!: string | null;
 
   @ApiProperty({
     required: false,

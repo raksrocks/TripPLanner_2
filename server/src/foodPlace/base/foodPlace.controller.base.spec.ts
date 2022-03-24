@@ -11,20 +11,24 @@ import { FoodPlaceService } from "../foodPlace.service";
 const nonExistingId = "nonExistingId";
 const existingId = "existingId";
 const CREATE_INPUT = {
+  closes: "exampleCloses",
   createdAt: new Date(),
   geolocation: "exampleGeolocation",
   id: "exampleId",
   name: "exampleName",
+  opens: "exampleOpens",
   rating: 42,
   typeoffood: "exampleTypeoffood",
   typicalTimespent: "exampleTypicalTimespent",
   updatedAt: new Date(),
 };
 const CREATE_RESULT = {
+  closes: "exampleCloses",
   createdAt: new Date(),
   geolocation: "exampleGeolocation",
   id: "exampleId",
   name: "exampleName",
+  opens: "exampleOpens",
   rating: 42,
   typeoffood: "exampleTypeoffood",
   typicalTimespent: "exampleTypicalTimespent",
@@ -32,10 +36,12 @@ const CREATE_RESULT = {
 };
 const FIND_MANY_RESULT = [
   {
+    closes: "exampleCloses",
     createdAt: new Date(),
     geolocation: "exampleGeolocation",
     id: "exampleId",
     name: "exampleName",
+    opens: "exampleOpens",
     rating: 42,
     typeoffood: "exampleTypeoffood",
     typicalTimespent: "exampleTypicalTimespent",
@@ -43,10 +49,12 @@ const FIND_MANY_RESULT = [
   },
 ];
 const FIND_ONE_RESULT = {
+  closes: "exampleCloses",
   createdAt: new Date(),
   geolocation: "exampleGeolocation",
   id: "exampleId",
   name: "exampleName",
+  opens: "exampleOpens",
   rating: 42,
   typeoffood: "exampleTypeoffood",
   typicalTimespent: "exampleTypicalTimespent",
