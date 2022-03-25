@@ -25,7 +25,7 @@ export const FoodPlaceEdit = (props: EditProps): React.ReactElement => {
         <TextInput label="opens" source="opens" />
         <NumberInput step={1} label="rating" source="rating" />
         <TextInput label="typeoffood" source="typeoffood" />
-        <TextInput label="typicalTimespent" source="typicalTimespent" />
+        <NumberInput label="typicalTimespent" source="typicalTimespent" />
       </SimpleForm>
     </Edit>
   );
