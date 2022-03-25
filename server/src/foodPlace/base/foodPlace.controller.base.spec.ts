@@ -19,7 +19,7 @@ const CREATE_INPUT = {
   opens: "exampleOpens",
   rating: 42,
   typeoffood: "exampleTypeoffood",
-  typicalTimespent: "exampleTypicalTimespent",
+  typicalTimespent: 42.42,
   updatedAt: new Date(),
 };
 const CREATE_RESULT = {
@@ -31,7 +31,7 @@ const CREATE_RESULT = {
   opens: "exampleOpens",
   rating: 42,
   typeoffood: "exampleTypeoffood",
-  typicalTimespent: "exampleTypicalTimespent",
+  typicalTimespent: 42.42,
   updatedAt: new Date(),
 };
 const FIND_MANY_RESULT = [
@@ -44,7 +44,7 @@ const FIND_MANY_RESULT = [
     opens: "exampleOpens",
     rating: 42,
     typeoffood: "exampleTypeoffood",
-    typicalTimespent: "exampleTypicalTimespent",
+    typicalTimespent: 42.42,
     updatedAt: new Date(),
   },
 ];
@@ -57,7 +57,7 @@ const FIND_ONE_RESULT = {
   opens: "exampleOpens",
   rating: 42,
   typeoffood: "exampleTypeoffood",
-  typicalTimespent: "exampleTypicalTimespent",
+  typicalTimespent: 42.42,
   updatedAt: new Date(),
 };
 
@@ -145,9 +145,9 @@ describe("FoodPlace", () => {
   test("GET /foodPlaces/:id non existing", async () => {
     await request(app.getHttpServer())
       .get(`${"/foodPlaces"}/${nonExistingId}`)
-      .expect(404)
+      .expect(HttpStatus.NOT_FOUND)
       .expect({
-        statusCode: 404,
+        statusCode: HttpStatus.NOT_FOUND,
         message: `No resource was found for {"${"id"}":"${nonExistingId}"}`,
         error: "Not Found",
       });

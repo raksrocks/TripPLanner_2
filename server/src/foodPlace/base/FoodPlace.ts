@@ -18,6 +18,7 @@ import {
   IsString,
   IsDate,
   IsInt,
+  IsNumber,
 } from "class-validator";
 import { Type } from "class-transformer";
 @ObjectType()
@@ -115,14 +116,14 @@ class FoodPlace {
 
   @ApiProperty({
     required: false,
-    type: String,
+    type: Number,
   })
-  @IsString()
+  @IsNumber()
   @IsOptional()
-  @Field(() => String, {
+  @Field(() => Number, {
     nullable: true,
   })
-  typicalTimespent!: string | null;
+  typicalTimespent!: number | null;
 
   @ApiProperty({
     required: true,
