@@ -2,6 +2,7 @@ import { CityWhereUniqueInput } from "../city/CityWhereUniqueInput";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { IntNullableFilter } from "../../util/IntNullableFilter";
+import { FloatNullableFilter } from "../../util/FloatNullableFilter";
 
 export type FoodPlaceWhereInput = {
   city?: CityWhereUniqueInput;
@@ -12,5 +13,5 @@ export type FoodPlaceWhereInput = {
   opens?: StringNullableFilter;
   rating?: IntNullableFilter;
   typeoffood?: StringNullableFilter;
-  typicalTimespent?: StringNullableFilter;
+  typicalTimespent?: FloatNullableFilter;
 };

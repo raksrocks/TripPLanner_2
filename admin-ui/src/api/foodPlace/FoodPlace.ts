@@ -10,6 +10,6 @@ export type FoodPlace = {
   opens: string | null;
   rating: number | null;
   typeoffood: string | null;
-  typicalTimespent: string | null;
+  typicalTimespent: number | null;
   updatedAt: Date;
 };

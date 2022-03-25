@@ -12,7 +12,13 @@ https://docs.amplication.com/docs/how-to/custom-code
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
 import { CityWhereUniqueInput } from "../../city/base/CityWhereUniqueInput";
-import { ValidateNested, IsOptional, IsString, IsInt } from "class-validator";
+import {
+  ValidateNested,
+  IsOptional,
+  IsString,
+  IsInt,
+  IsNumber,
+} from "class-validator";
 import { Type } from "class-transformer";
 @InputType()
 class FoodPlaceCreateInput {
@@ -96,13 +102,13 @@ class FoodPlaceCreateInput {
 
   @ApiProperty({
     required: false,
-    type: String,
+    type: Number,
   })
-  @IsString()
+  @IsNumber()
   @IsOptional()
-  @Field(() => String, {
+  @Field(() => Number, {
     nullable: true,
   })
-  typicalTimespent?: string | null;
+  typicalTimespent?: number | null;
 }
 export { FoodPlaceCreateInput };
