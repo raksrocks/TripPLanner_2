@@ -27,7 +27,7 @@ import { StartStopPlaceWhereUniqueInput } from "./StartStopPlaceWhereUniqueInput
 import { StartStopPlaceFindManyArgs } from "./StartStopPlaceFindManyArgs";
 import { StartStopPlaceUpdateInput } from "./StartStopPlaceUpdateInput";
 import { StartStopPlace } from "./StartStopPlace";
-@swagger.ApiBearerAuth()
+@swagger.ApiBasicAuth()
 export class StartStopPlaceControllerBase {
   constructor(
     protected readonly service: StartStopPlaceService,
