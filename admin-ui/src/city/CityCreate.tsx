@@ -19,7 +19,7 @@ export const CityCreate = (props: CreateProps): React.ReactElement => {
         <TextInput label="code" source="code" />
         <TextInput label="Country" source="country" />
         <ReferenceArrayInput
-          source="foodplace"
+          source="foodPlaces"
           reference="FoodPlace"
           parse={(value: any) => value && value.map((v: any) => ({ id: v }))}
           format={(value: any) => value && value.map((v: any) => v.id)}
@@ -28,7 +28,7 @@ export const CityCreate = (props: CreateProps): React.ReactElement => {
         </ReferenceArrayInput>
         <TextInput label="Name" source="name" />
         <ReferenceArrayInput
-          source="startstopplace"
+          source="startStopPlaces"
           reference="StartStopPlace"
           parse={(value: any) => value && value.map((v: any) => ({ id: v }))}
           format={(value: any) => value && value.map((v: any) => v.id)}

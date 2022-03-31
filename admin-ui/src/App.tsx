@@ -25,7 +25,7 @@ import { FoodPlaceList } from "./foodPlace/FoodPlaceList";
 import { FoodPlaceCreate } from "./foodPlace/FoodPlaceCreate";
 import { FoodPlaceEdit } from "./foodPlace/FoodPlaceEdit";
 import { FoodPlaceShow } from "./foodPlace/FoodPlaceShow";
-import { httpAuthProvider } from "./auth-provider/ra-auth-http";
+import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
   const [dataProvider, setDataProvider] = useState<DataProvider | null>(null);
@@ -46,7 +46,7 @@ const App = (): React.ReactElement => {
       <Admin
         title={"Trip Planner"}
         dataProvider={dataProvider}
-        authProvider={httpAuthProvider}
+        authProvider={jwtAuthProvider}
         theme={theme}
         dashboard={Dashboard}
         loginPage={Login}

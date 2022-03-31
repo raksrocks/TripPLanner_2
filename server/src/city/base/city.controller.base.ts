@@ -33,7 +33,7 @@ import { FoodPlaceWhereUniqueInput } from "../../foodPlace/base/FoodPlaceWhereUn
 import { StartStopPlaceFindManyArgs } from "../../startStopPlace/base/StartStopPlaceFindManyArgs";
 import { StartStopPlace } from "../../startStopPlace/base/StartStopPlace";
 import { StartStopPlaceWhereUniqueInput } from "../../startStopPlace/base/StartStopPlaceWhereUniqueInput";
-@swagger.ApiBasicAuth()
+@swagger.ApiBearerAuth()
 export class CityControllerBase {
   constructor(
     protected readonly service: CityService,
