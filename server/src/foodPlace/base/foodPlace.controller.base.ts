@@ -27,7 +27,7 @@ import { FoodPlaceWhereUniqueInput } from "./FoodPlaceWhereUniqueInput";
 import { FoodPlaceFindManyArgs } from "./FoodPlaceFindManyArgs";
 import { FoodPlaceUpdateInput } from "./FoodPlaceUpdateInput";
 import { FoodPlace } from "./FoodPlace";
-@swagger.ApiBasicAuth()
+@swagger.ApiBearerAuth()
 export class FoodPlaceControllerBase {
   constructor(
     protected readonly service: FoodPlaceService,

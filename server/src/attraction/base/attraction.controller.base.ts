@@ -27,7 +27,7 @@ import { AttractionWhereUniqueInput } from "./AttractionWhereUniqueInput";
 import { AttractionFindManyArgs } from "./AttractionFindManyArgs";
 import { AttractionUpdateInput } from "./AttractionUpdateInput";
 import { Attraction } from "./Attraction";
-@swagger.ApiBasicAuth()
+@swagger.ApiBearerAuth()
 export class AttractionControllerBase {
   constructor(
     protected readonly service: AttractionService,
