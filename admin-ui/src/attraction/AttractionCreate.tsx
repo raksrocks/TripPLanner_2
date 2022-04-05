@@ -16,6 +16,8 @@ export const AttractionCreate = (props: CreateProps): React.ReactElement => {
         <TextInput label="Location" source="location" />
         <TextInput label="Name" source="name" />
         <TextInput label="Opens" source="opens" />
+        <NumberInput label="rating" source="rating" />
+        <NumberInput step={1} label="ratings_count" source="ratingsCount" />
         <NumberInput label="TypicalTimeSpent" source="typicalTimeSpent" />
       </SimpleForm>
     </Create>

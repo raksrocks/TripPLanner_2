@@ -11,7 +11,7 @@ https://docs.amplication.com/docs/how-to/custom-code
   */
 import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString, IsOptional, IsDate, IsNumber } from "class-validator";
+import { IsString, IsOptional, IsDate, IsNumber, IsInt } from "class-validator";
 import { Type } from "class-transformer";
 @ObjectType()
 class Attraction {
@@ -85,6 +85,28 @@ class Attraction {
     nullable: true,
   })
   opens!: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsNumber()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  rating!: number | null;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsInt()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  ratingsCount!: number | null;
 
   @ApiProperty({
     required: false,
