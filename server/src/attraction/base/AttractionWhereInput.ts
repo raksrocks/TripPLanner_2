@@ -16,6 +16,7 @@ import { Type } from "class-transformer";
 import { IsOptional } from "class-validator";
 import { StringFilter } from "../../util/StringFilter";
 import { FloatNullableFilter } from "../../util/FloatNullableFilter";
+import { IntNullableFilter } from "../../util/IntNullableFilter";
 @InputType()
 class AttractionWhereInput {
   @ApiProperty({
@@ -72,6 +73,28 @@ class AttractionWhereInput {
     nullable: true,
   })
   opens?: StringNullableFilter;
+
+  @ApiProperty({
+    required: false,
+    type: FloatNullableFilter,
+  })
+  @Type(() => FloatNullableFilter)
+  @IsOptional()
+  @Field(() => FloatNullableFilter, {
+    nullable: true,
+  })
+  rating?: FloatNullableFilter;
+
+  @ApiProperty({
+    required: false,
+    type: IntNullableFilter,
+  })
+  @Type(() => IntNullableFilter)
+  @IsOptional()
+  @Field(() => IntNullableFilter, {
+    nullable: true,
+  })
+  ratingsCount?: IntNullableFilter;
 
   @ApiProperty({
     required: false,

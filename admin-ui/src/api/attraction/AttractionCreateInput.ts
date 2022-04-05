@@ -4,5 +4,7 @@ export type AttractionCreateInput = {
   location?: string | null;
   name?: string | null;
   opens?: string | null;
+  rating?: number | null;
+  ratingsCount?: number | null;
   typicalTimeSpent?: number | null;
 };

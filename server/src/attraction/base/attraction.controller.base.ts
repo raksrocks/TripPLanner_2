@@ -27,7 +27,7 @@ import { AttractionWhereUniqueInput } from "./AttractionWhereUniqueInput";
 import { AttractionFindManyArgs } from "./AttractionFindManyArgs";
 import { AttractionUpdateInput } from "./AttractionUpdateInput";
 import { Attraction } from "./Attraction";
-@swagger.ApiBearerAuth()
+@swagger.ApiBasicAuth()
 export class AttractionControllerBase {
   constructor(
     protected readonly service: AttractionService,
@@ -79,6 +79,8 @@ export class AttractionControllerBase {
         location: true,
         name: true,
         opens: true,
+        rating: true,
+        ratingsCount: true,
         typicalTimeSpent: true,
         updatedAt: true,
       },
@@ -121,6 +123,8 @@ export class AttractionControllerBase {
         location: true,
         name: true,
         opens: true,
+        rating: true,
+        ratingsCount: true,
         typicalTimeSpent: true,
         updatedAt: true,
       },
@@ -162,6 +166,8 @@ export class AttractionControllerBase {
         location: true,
         name: true,
         opens: true,
+        rating: true,
+        ratingsCount: true,
         typicalTimeSpent: true,
         updatedAt: true,
       },
@@ -224,6 +230,8 @@ export class AttractionControllerBase {
           location: true,
           name: true,
           opens: true,
+          rating: true,
+          ratingsCount: true,
           typicalTimeSpent: true,
           updatedAt: true,
         },
@@ -266,6 +274,8 @@ export class AttractionControllerBase {
           location: true,
           name: true,
           opens: true,
+          rating: true,
+          ratingsCount: true,
           typicalTimeSpent: true,
           updatedAt: true,
         },
