@@ -88,6 +88,24 @@ class AttractionOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
+  rating?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
+  ratingsCount?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
   typicalTimeSpent?: SortOrder;
 
   @ApiProperty({
