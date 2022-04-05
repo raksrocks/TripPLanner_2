@@ -19,6 +19,8 @@ export const AttractionList = (props: ListProps): React.ReactElement => {
         <TextField label="Location" source="location" />
         <TextField label="Name" source="name" />
         <TextField label="Opens" source="opens" />
+        <TextField label="rating" source="rating" />
+        <TextField label="ratings_count" source="ratingsCount" />
         <TextField label="TypicalTimeSpent" source="typicalTimeSpent" />
         <DateField source="updatedAt" label="Updated At" />
       </Datagrid>
