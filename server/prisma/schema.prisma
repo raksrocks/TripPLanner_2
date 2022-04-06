@@ -37,6 +37,8 @@ model Attraction {
   location         String?
   name             String?
   opens            String?
+  rating           Float?
+  ratingsCount     Int?
   typicalTimeSpent Float?
   updatedAt        DateTime @updatedAt
 }

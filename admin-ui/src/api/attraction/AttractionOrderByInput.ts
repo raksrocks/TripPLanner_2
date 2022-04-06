@@ -8,6 +8,8 @@ export type AttractionOrderByInput = {
   location?: SortOrder;
   name?: SortOrder;
   opens?: SortOrder;
+  rating?: SortOrder;
+  ratingsCount?: SortOrder;
   typicalTimeSpent?: SortOrder;
   updatedAt?: SortOrder;
 };

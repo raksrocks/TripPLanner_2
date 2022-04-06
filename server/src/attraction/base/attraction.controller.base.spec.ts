@@ -18,6 +18,8 @@ const CREATE_INPUT = {
   location: "exampleLocation",
   name: "exampleName",
   opens: "exampleOpens",
+  rating: 42.42,
+  ratingsCount: 42,
   typicalTimeSpent: 42.42,
   updatedAt: new Date(),
 };
@@ -29,6 +31,8 @@ const CREATE_RESULT = {
   location: "exampleLocation",
   name: "exampleName",
   opens: "exampleOpens",
+  rating: 42.42,
+  ratingsCount: 42,
   typicalTimeSpent: 42.42,
   updatedAt: new Date(),
 };
@@ -41,6 +45,8 @@ const FIND_MANY_RESULT = [
     location: "exampleLocation",
     name: "exampleName",
     opens: "exampleOpens",
+    rating: 42.42,
+    ratingsCount: 42,
     typicalTimeSpent: 42.42,
     updatedAt: new Date(),
   },
@@ -53,6 +59,8 @@ const FIND_ONE_RESULT = {
   location: "exampleLocation",
   name: "exampleName",
   opens: "exampleOpens",
+  rating: 42.42,
+  ratingsCount: 42,
   typicalTimeSpent: 42.42,
   updatedAt: new Date(),
 };
